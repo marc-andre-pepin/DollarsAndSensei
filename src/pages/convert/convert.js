@@ -2,6 +2,7 @@ import React from "react";
 import {withRouter} from "react-router-dom";
 
 import {currencies, calcExchangeRate} from "../../data/currencyData";
+import ConversionChart from "../../components/currencyComparisonChart/currencyComparisonChart"
 
 import "./convert.css"
 
@@ -61,11 +62,11 @@ class Convert extends React.Component {
                     <div id="baseCurrencyOptions">
                         <input id="baseCurrencyAmt" type="number" step="0.01" min="0.00"
                                onChange={this.handleBaseCurrencyAmtChange} value={this.state.baseCurrencyAmt}/>
-                        <select id="baseCurrency" onChange={this.handleBaseCurrencyChange}>
+                        <select id="baseCurrency" onChange={this.handleBaseCurrencyChange}
+                                value={this.state.baseCurrency}>
                             {
                                 currencies.map((c) =>
-                                    <option key={c.symbol} value={c.symbol}
-                                            selected={c.symbol === this.state.baseCurrency}>
+                                    <option key={c.symbol} value={c.symbol}>
                                         {c.symbol} - {c.name}
                                     </option>
                                 )
@@ -78,11 +79,11 @@ class Convert extends React.Component {
                     <div id="targetCurrencyOptions">
                     <span
                         id="convertedAmt">{(this.state.baseCurrencyAmt * calcExchangeRate(this.state.baseCurrency, this.state.targetCurrency)).toFixed(6)}</span>
-                        <select id="targetCurrency" onChange={this.handleTargetCurrencyChange}>
+                        <select id="targetCurrency" onChange={this.handleTargetCurrencyChange}
+                                value={this.state.targetCurrency}>
                             {
                                 currencies.map((c) =>
-                                    <option key={c.symbol} value={c.symbol}
-                                            selected={c.symbol === this.state.targetCurrency}>
+                                    <option key={c.symbol} value={c.symbol}>
                                         {c.symbol} - {c.name}
                                     </option>
                                 )
@@ -91,8 +92,8 @@ class Convert extends React.Component {
                     </div>
                 </div>
                 <div id="chart">
-                    {/*TODO get from library/api data*/}
-                    <img src="https://www.chartoasis.com/charts/usd-jpy-10-years-chart-desktop.png"/>
+                    <ConversionChart key={`${this.state.baseCurrency}-${this.state.targetCurrency}`} baseCurrencySymbol={this.state.baseCurrency} targetCurrencySymbol={this.state.targetCurrency}
+                           targetCurrencyValue={(this.state.baseCurrencyAmt * calcExchangeRate(this.state.baseCurrency, this.state.targetCurrency))}/>
                 </div>
             </div>
         )

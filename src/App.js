@@ -38,10 +38,10 @@ const App = () => {
             <footer id="footer" className="bg-dark">
                 <div className="d-flex justify-content-evenly">
                     <div>
-                        <a className="text-light">Social</a>
+                        <a href="https://github.com/marc-andre-pepin" target="_blank" className="text-light">GitHub</a>
                     </div>
                     <div>
-                        <a className="text-light">Contact</a>
+                        <a href="https://www.linkedin.com/in/marc-andré-pépin-2b1ba2107/" target="_blank" className="text-light">LinkedIn</a>
                     </div>
 
                 </div>
