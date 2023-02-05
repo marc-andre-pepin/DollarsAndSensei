@@ -15,7 +15,6 @@ const App = () => {
     return (
         <Router basename="/DollarsAndSensei">
             <nav id="topnav" className="bg-light">
-                {/*TODO add List and Convert links*/}
                 <div className="d-flex">
                     <div className="p-2 flex-grow-1 ms-5">
                         <Link className="navbar-brand" to="/">Dollars and Sensei</Link>
@@ -24,7 +23,7 @@ const App = () => {
                         <Link className="navbar-brand" to="/">Compare</Link>
                     </div>
                     <div className="p-2 me-5">
-                        <Link className="navbar-brand" to="/convert/USD/JPY">Convert</Link>
+                        <Link className="navbar-brand" to="/convert/USD/GBP">Convert</Link>
                     </div>
                 </div>
             </nav>
