@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DollarsAndSensei/static/css/main.791949cf.css",
-    "main.js": "/DollarsAndSensei/static/js/main.0d98a662.js",
+    "main.js": "/DollarsAndSensei/static/js/main.84ee8138.js",
     "static/js/787.f0f40e5e.chunk.js": "/DollarsAndSensei/static/js/787.f0f40e5e.chunk.js",
     "index.html": "/DollarsAndSensei/index.html",
     "main.791949cf.css.map": "/DollarsAndSensei/static/css/main.791949cf.css.map",
-    "main.0d98a662.js.map": "/DollarsAndSensei/static/js/main.0d98a662.js.map",
+    "main.84ee8138.js.map": "/DollarsAndSensei/static/js/main.84ee8138.js.map",
     "787.f0f40e5e.chunk.js.map": "/DollarsAndSensei/static/js/787.f0f40e5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.791949cf.css",
-    "static/js/main.0d98a662.js"
+    "static/js/main.84ee8138.js"
   ]
 }
