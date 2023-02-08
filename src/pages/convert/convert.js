@@ -2,7 +2,8 @@ import React from "react";
 import {withRouter} from "react-router-dom";
 
 import {currencies, calcExchangeRate} from "../../data/currencyData";
-import ConversionChart from "../../components/currencyComparisonChart/currencyComparisonChart"
+import ConversionChart from "../../components/currencyComparisonChart/currencyComparisonChart";
+import CurrencyHistoryChart from "../../components/currencyHistoryChart/currencyHistoryChart";
 
 import "./convert.css"
 
@@ -91,9 +92,12 @@ class Convert extends React.Component {
                         </select>
                     </div>
                 </div>
-                <div id="chart">
+                <div className="chart">
                     <ConversionChart key={`${this.state.baseCurrency}-${this.state.targetCurrency}`} baseCurrencySymbol={this.state.baseCurrency} targetCurrencySymbol={this.state.targetCurrency}
                            targetCurrencyValue={(this.state.baseCurrencyAmt * calcExchangeRate(this.state.baseCurrency, this.state.targetCurrency))}/>
+                </div>
+                <div className="chart">
+                    <CurrencyHistoryChart key={`${this.state.baseCurrency}-${this.state.targetCurrency}`} baseCurrencySymbol={this.state.baseCurrency} targetCurrencySymbol={this.state.targetCurrency}/>
                 </div>
             </div>
         )
