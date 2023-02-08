@@ -1,12 +1,10 @@
 import React from "react";
 
 import {
-    Chart, registerables
-} from 'chart.js';
+    Chart
+} from 'chart.js/auto';
 
 import "./currencyHistoryChart.css";
-
-Chart.register(...registerables);
 
 class HistoryChart extends React.Component {
     constructor(props) {
