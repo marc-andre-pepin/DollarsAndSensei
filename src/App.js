@@ -27,7 +27,7 @@ const App = () => {
                     </div>
                 </div>
             </nav>
-            <div id="main-content" className="container col-md-3 col-sm-6 pt-2">
+            <div id="main-content" className="container-fluid col-lg-8 col-md-4 col-sm-12 pt-2">
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/convert/:baseCurrency/:targetCurrency" component={Convert}/>

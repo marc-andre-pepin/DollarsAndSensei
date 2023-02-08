@@ -59,8 +59,8 @@ class Convert extends React.Component {
     render() {
         return (
             <div>
-                <div id="currencyOptions">
-                    <div id="baseCurrencyOptions">
+                <div id="currencyOptions" className="d-flex flex-column flex-md-row justify-content-md-around">
+                    <div id="baseCurrencyOptions" className="d-flex flex-column align-self-center">
                         <input id="baseCurrencyAmt" type="number" step="0.01" min="0.00"
                                onChange={this.handleBaseCurrencyAmtChange} value={this.state.baseCurrencyAmt}/>
                         <select id="baseCurrency" onChange={this.handleBaseCurrencyChange}
@@ -74,12 +74,12 @@ class Convert extends React.Component {
                             }
                         </select>
                     </div>
-                    <div id="flipCurrencyDiv">
+                    <div id="flipCurrencyDiv" className="d-flex flex-column align-self-center">
                         <span id="flipCurrencyBtn" onClick={this.flipCurrency}>↔</span>
                     </div>
-                    <div id="targetCurrencyOptions">
+                    <div id="targetCurrencyOptions" className="d-flex flex-column align-self-center">
                     <span
-                        id="convertedAmt">{(this.state.baseCurrencyAmt * calcExchangeRate(this.state.baseCurrency, this.state.targetCurrency)).toFixed(6)}</span>
+                        id="convertedAmt" className="pt-1 pb-1 align-self-end">{(this.state.baseCurrencyAmt * calcExchangeRate(this.state.baseCurrency, this.state.targetCurrency)).toFixed(6)}</span>
                         <select id="targetCurrency" onChange={this.handleTargetCurrencyChange}
                                 value={this.state.targetCurrency}>
                             {
@@ -92,11 +92,11 @@ class Convert extends React.Component {
                         </select>
                     </div>
                 </div>
-                <div className="chart">
+                <div className="chart d-flex justify-content-center">
                     <ConversionChart key={`${this.state.baseCurrency}-${this.state.targetCurrency}`} baseCurrencySymbol={this.state.baseCurrency} targetCurrencySymbol={this.state.targetCurrency}
                            targetCurrencyValue={(this.state.baseCurrencyAmt * calcExchangeRate(this.state.baseCurrency, this.state.targetCurrency))}/>
                 </div>
-                <div className="chart">
+                <div className="chart d-flex justify-content-center">
                     <CurrencyHistoryChart key={`${this.state.baseCurrency}-${this.state.targetCurrency}`} baseCurrencySymbol={this.state.baseCurrency} targetCurrencySymbol={this.state.targetCurrency}/>
                 </div>
             </div>

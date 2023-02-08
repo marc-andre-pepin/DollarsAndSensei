@@ -5,3 +5,12 @@
 #flipCurrencyBtn {
     cursor: pointer;
 }
+
+#baseCurrency {
+    margin-left: 0;
+}
+
+#flipCurrencyBtn {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
