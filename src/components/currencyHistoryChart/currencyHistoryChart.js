@@ -1,12 +1,12 @@
 import React from "react";
 
 import {
-    Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, PointElement, LineElement
+    Chart, registerables
 } from 'chart.js';
 
 import "./currencyHistoryChart.css";
 
-Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, PointElement, LineElement);
+Chart.register(...registerables);
 
 class HistoryChart extends React.Component {
     constructor(props) {
