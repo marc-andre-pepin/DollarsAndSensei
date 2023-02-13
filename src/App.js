@@ -30,7 +30,7 @@ const App = () => {
             <div id="main-content" className="container-fluid col-lg-8 col-md-4 col-sm-12 pt-2">
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/convert/:baseCurrency/:targetCurrency" component={Convert}/>
+                    <Route exact path="/convert/:baseCurrency/:targetCurrency" component={Convert}/>
                     <Route component={NotFound}/>
                 </Switch>
             </div>
