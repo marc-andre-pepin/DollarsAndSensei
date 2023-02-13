@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DollarsAndSensei/static/css/main.6453248f.css",
-    "main.js": "/DollarsAndSensei/static/js/main.5b09bf26.js",
-    "static/js/787.f0f40e5e.chunk.js": "/DollarsAndSensei/static/js/787.f0f40e5e.chunk.js",
-    "index.html": "/DollarsAndSensei/index.html",
-    "main.6453248f.css.map": "/DollarsAndSensei/static/css/main.6453248f.css.map",
-    "main.5b09bf26.js.map": "/DollarsAndSensei/static/js/main.5b09bf26.js.map",
-    "787.f0f40e5e.chunk.js.map": "/DollarsAndSensei/static/js/787.f0f40e5e.chunk.js.map"
+    "main.css": "/dollarsandsensei/static/css/main.6453248f.css",
+    "main.js": "/dollarsandsensei/static/js/main.88b1ecb4.js",
+    "static/js/787.f0f40e5e.chunk.js": "/dollarsandsensei/static/js/787.f0f40e5e.chunk.js",
+    "index.html": "/dollarsandsensei/index.html",
+    "main.6453248f.css.map": "/dollarsandsensei/static/css/main.6453248f.css.map",
+    "main.88b1ecb4.js.map": "/dollarsandsensei/static/js/main.88b1ecb4.js.map",
+    "787.f0f40e5e.chunk.js.map": "/dollarsandsensei/static/js/787.f0f40e5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6453248f.css",
-    "static/js/main.5b09bf26.js"
+    "static/js/main.88b1ecb4.js"
   ]
 }
