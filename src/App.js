@@ -13,7 +13,7 @@ const NotFound = () => {
 
 const App = () => {
     return (
-        <Router basename="/DollarsAndSensei">
+        <Router basename="/dollarsandsensei">
             <nav id="topnav" className="bg-light">
                 <div className="d-flex">
                     <div className="p-2 flex-grow-1 ms-5">
@@ -30,7 +30,7 @@ const App = () => {
             <div id="main-content" className="container-fluid col-lg-8 col-md-4 col-sm-12 pt-2">
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route exact path="/convert/:baseCurrency/:targetCurrency" component={Convert}/>
+                    <Route path="/convert/:baseCurrency/:targetCurrency" component={Convert}/>
                     <Route component={NotFound}/>
                 </Switch>
             </div>
@@ -40,11 +40,10 @@ const App = () => {
                         <a href="https://github.com/marc-andre-pepin" target="_blank" className="text-light">GitHub</a>
                     </div>
                     <div>
-                        <a href="https://www.linkedin.com/in/marc-andré-pépin-2b1ba2107/" target="_blank" className="text-light">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/marc-andré-pépin-2b1ba2107/" target="_blank"
+                           className="text-light">LinkedIn</a>
                     </div>
-
                 </div>
-
             </footer>
         </Router>
     )
